@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "63ceb540-5a0a-412d-a97f-2672d73b8729",
+		"name": "agroapps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"alexis\",\r\n    \"email\": \"alexis.tsionoglou@gmail.com\",\r\n    \"password\": \"ikariam1926\"   \r\n}"
+				},
+				"url": {
+					"raw": "http://agroapps.localhost/user",
+					"protocol": "http",
+					"host": [
+						"agroapps",
+						"localhost"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "thdhdfhdfhdhddhfhdfh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alexis.tsionoglou@gmail.com\",\r\n    \"password\": \"ikariam1926\"   \r\n}"
+				},
+				"url": {
+					"raw": "http://agroapps.localhost/user",
+					"protocol": "http",
+					"host": [
+						"agroapps",
+						"localhost"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateShop",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "d9ad42dfde0200e7a439114627409d93",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "http://agroapps.localhost/shop",
+					"protocol": "http",
+					"host": [
+						"agroapps",
+						"localhost"
+					],
+					"path": [
+						"shop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditShop",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "533a1118126ddc8e8b9a8b9af32e5c10",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category_id\": 3,\r\n    \"description\": \"menswomens4\",\r\n    \"open_hours\": \"kathe mera\",\r\n    \"city\": \"larisa\",\r\n    \"address\": \"ioannou kosma 1\"   \r\n}"
+				},
+				"url": {
+					"raw": "http://agroapps.localhost/shop/5",
+					"protocol": "http",
+					"host": [
+						"agroapps",
+						"localhost"
+					],
+					"path": [
+						"shop",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteShop",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "533a1118126ddc8e8b9a8b9af32e5c10",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://agroapps.localhost/shop/5",
+					"protocol": "http",
+					"host": [
+						"agroapps",
+						"localhost"
+					],
+					"path": [
+						"shop",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetShops",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "b40be69cba7e835c7e829129729e318a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"limit\": 3,\r\n    \"page\": 1,\r\n    \"description\": \"menswome\",\r\n    \"category_id\": 2,\r\n    \"city\": \"katerini\"\r\n}"
+				},
+				"url": {
+					"raw": "http://agroapps.localhost/shop",
+					"protocol": "http",
+					"host": [
+						"agroapps",
+						"localhost"
+					],
+					"path": [
+						"shop"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
